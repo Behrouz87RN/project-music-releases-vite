@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+.mainContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.album {
+    width: 100;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+}
