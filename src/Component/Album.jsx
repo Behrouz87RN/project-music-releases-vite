@@ -3,6 +3,10 @@ import AlbumName from './AlbumName';
 import ArtistName from './ArtistName';
 import CoverImage from './CoverImage';
 
+import heartIcon from '../assets/icons/heart.svg';
+import playIcon from '../assets/icons/play.svg';
+import dotsIcon from '../assets/icons/dots.svg';
+
 import './Album.css';
 
 //  You should display the following for each album:
@@ -19,9 +23,9 @@ const Album = ({ data }) => {
       <a className='imgContainer' href={href}>
         <CoverImage src={images[0].url} alt={name} />
         <div className='hoverButtons'>
-          <span className='heartIcon'><img src="../src/assets/icons/heart.svg" /></span>
-          <span className='playIcon'><img src="../src/assets/icons/play.svg" /></span>
-          <span className='dotsIcon'><img src="../src/assets/icons/dots.svg" /></span>
+          <span className='heartIcon'><img src={heartIcon} /></span>
+          <span className='playIcon'><img src={playIcon} /></span>
+          <span className='dotsIcon'><img src={dotsIcon} /></span>
         </div>
       </a>
       <AlbumName name={name} href={href} />
