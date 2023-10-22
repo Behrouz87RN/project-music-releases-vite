@@ -16,11 +16,11 @@ import './Album.css';
 
 
 const Album = ({ data }) => {
-  const {name, images, artists , href} = data;
+  const {name, images, artists , external_urls} = data;
 
   return (
     <div className='albumItem'>
-      <a className='imgContainer' href={href}>
+      <a className='imgContainer' href={external_urls.spotify}>
         <CoverImage src={images[0].url} alt={name} />
         <div className='hoverButtons'>
           <span className='heartIcon'><img src={heartIcon} /></span>
@@ -28,7 +28,7 @@ const Album = ({ data }) => {
           <span className='dotsIcon'><img src={dotsIcon} /></span>
         </div>
       </a>
-      <AlbumName name={name} href={href} />
+      <AlbumName name={name} href={external_urls.spotify} />
       <ArtistName artists={artists} />
     </div>
 );
